@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Delhi Date</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ff8c00, #ff6600);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, p {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    a {
+      color: #FFF;
+      text-decoration: none;
+      margin-top: 20px;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the world of Delhi Date</h1>
+  {% if match_username and match_insta_link %}
+      <p>You got matched with: <a href="{{ match_insta_link }}" target="_blank">{{ match_username }}</a></p>
+  {% elif match_username %}
+      <p>You got matched with: {{ match_username }}</p>
+  {% else %}
+      <p>No matches found.</p>
+  {% endif %}
+
+  <a href="/">Logout</a>
+</body>
+</html>

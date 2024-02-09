@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delhi Date - Sign Up</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Container */
+    .container {
+      width: 400px;
+      padding: 30px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      letter-spacing: 2px;
+    }
+
+    /* Signup form */
+    .signup-form {
+      padding-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    input[type="text"], input[type="password"], input[type="date"], select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color:  #E854C0 ;
+      color: #fff;
+      border: 1px solid  #E854C0 ;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color:  #E854C0 ;
+    }
+
+    /* Login link */
+    a {
+      display: block;
+      text-align: center;
+      color:  #E854C0 ;
+      text-decoration: none;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Delhi Date</h1>
+    </div>
+    <div class="signup-form">
+      <form action="/signup" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="dob">Birthdate:</label>
+        <input type="date" id="birthdate" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="instagram-link">Insta profile link:</label>
+        <input type="url" id="instagram-link" name="instagram_link" placeholder="https://www.instagram.com/yourusername" required>
+
+
+        <input type="submit" value="Sign Up">
+      </form>
+      <a href="/backtologin">Already have an account? Login</a>
+    </div>
+  </div>
+</body>
+</html>
